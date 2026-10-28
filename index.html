@@ -2,13 +2,31 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Free Blank Paper</title>
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="alternate" media="print" href="blank.pdf">
-<link rel="canonical" href="https://www.freeblankpaper.com/blank.pdf">
-<meta http-equiv="refresh" content="0; url=blank.pdf">
+<meta name="description" content="A free blank page. Print as many as you like.">
+<link rel="icon" href="favicon.ico">
+<link rel="canonical" href="https://www.freeblankpaper.com/">
+<style>
+  /* Zero margins leave browsers no room for their date/URL headers, so the printout is truly blank. */
+  @page { margin: 0; }
+  html, body { margin: 0; height: 100%; background: #fff; }
+  nav {
+    position: fixed;
+    right: 12px;
+    bottom: 8px;
+    font: 12px sans-serif;
+    color: #ddd;
+  }
+  nav a { color: inherit; text-decoration: none; }
+  nav a:hover { color: #999; }
+  @media print { nav { display: none; } }
+</style>
 </head>
 <body>
-<p><a href="blank.pdf">blank.pdf</a></p>
+<nav><a href="#" onclick="window.print(); return false;">print</a> · <a href="blank.pdf">pdf</a></nav>
+<script>
+  window.addEventListener("load", function () { window.print(); });
+</script>
 </body>
 </html>
